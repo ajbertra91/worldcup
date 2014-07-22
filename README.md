@@ -14,6 +14,16 @@ A simple app built with AngularJs to parse real data from the 2014 World Cup in 
 
 ## Installation
 
-uses Yeoman generator-gulp-angular by Swiip https://github.com/Swiip/generator-gulp-angular
+Install the required tools: `yo`, `gulp`, `bower`
+
+This uses the Yeoman `generator-gulp-angular` by Swiip https://github.com/Swiip/generator-gulp-angular
 
 follow Swiip's directions
+
+Install `generator-gulp-angular`:
+
+  npm install -g generator-gulp-angular
+
+To launch app
+
+  gulp serve
