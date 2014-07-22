@@ -21,9 +21,11 @@ This uses the Yeoman `generator-gulp-angular` by Swiip https://github.com/Swiip/
 follow Swiip's directions
 
 Install `generator-gulp-angular`:
-
-  npm install -g generator-gulp-angular
+```
+npm install -g generator-gulp-angular
+```
 
 To launch app
-
-  gulp serve
+```
+gulp serve
+```
