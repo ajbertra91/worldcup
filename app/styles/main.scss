@@ -1,0 +1,58 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+body {
+  background-color: #020202;
+  background-image: url("../images/stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+h1 {
+  color: #fff;
+}
+.team__list {
+  margin-bottom: 20px;
+}
+.matchups {
+  .search {
+    color: #000;
+  }
+  .matchup__list,
+  .matchup__details {
+    overflow-y: scroll;
+    max-height: 870px;
+  }
+  .matchup__list .panel-body,
+  .matchup__details .panel-heading {
+    @extend %flexbox-center
+  }
+  .matchup__list .panel-body {
+    cursor: pointer;
+  }
+  .matchup__detail {
+    .panel {
+      background-color: rgba(255,255,255,0.7);
+    }
+  }
+
+  [class*="__team"] {
+    text-align: center;
+    width: 100px;
+
+    &.winner {
+      color: yellowgreen;
+    }
+  }
+}
+
+%flexbox-center {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}

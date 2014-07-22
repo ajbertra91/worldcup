@@ -1,0 +1,94 @@
+<div class="row matchups">
+  <div class="col-xs-12">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title">World Cup 2014 Matchups</h1>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-xs-12 col-md-6">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Matchups</h2>
+          <div class="well well-sm">
+            <input class="search" ng-model="search" type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="panel-body matchup__list">
+          <div class="panel panel-default" ng-repeat="matchup in matchups | filter:search">
+            <div class="panel-heading">
+              <h5>{{matchup.location}}</h5>
+              <h6>{{matchup.datetime | date: 'EEE, MMM d, y'}}</h6>
+            </div>
+            <div class="panel-body" ng-click="setMatchup(matchup)">
+              <div class="home__team" ng-class="{ winner: calcWinner(matchup, 'ht') }">
+                <h4 class="name">{{matchup.home_team.code}}</h4>
+                <h4 class="score">{{matchup.home_team.goals}}</h4>
+              </div>
+              <div>VS</div>
+              <div class="away__team" ng-class="{ winner: calcWinner(matchup, 'at') }">
+                <h4 class="name">{{matchup.away_team.code}}</h4>
+                <h4 class="score">{{matchup.away_team.goals}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <div class="col-xs-12 col-md-6" ng-if="currentMatchup">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2 class="panel-title">Selected Matchup</h2>
+      </div>
+      <div class="panel-body matchup__details">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <div class="home__team" ng-class="{ winner: calcWinner(currentMatchup, 'ht') }">
+              <h4 class="name">{{currentMatchup.home_team.code}}</h4>
+              <h4 class="score">{{currentMatchup.home_team.goals}}</h4>
+            </div>
+            <div>VS</div>
+            <div class="away__team" ng-class="{ winner: calcWinner(currentMatchup, 'at') }">
+              <h4 class="name">{{currentMatchup.away_team.code}}</h4>
+              <h4 class="score">{{currentMatchup.away_team.goals}}</h4>
+            </div>
+          </div>
+          <div class="panel-body matchup__details--list">
+            <div class="row">
+              <div class="col-xs-6">
+
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="event in currentMatchup.home_team_events">
+                    <h5>{{event.type_of_event}}</h5>
+                    <h5>{{event.player}}</h5>
+                    <h5>{{event.time}}</h5>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-md-6">
+
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="event in currentMatchup.away_team_events">
+                    <h5>{{event.type_of_event}}</h5>
+                    <h5>{{event.player}}</h5>
+                    <h5>{{event.time}}</h5>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+</div>
