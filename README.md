@@ -20,12 +20,12 @@ This uses the Yeoman `generator-gulp-angular` by Swiip https://github.com/Swiip/
 
 follow Swiip's directions
 
-Install `generator-gulp-angular`:
+### Install app
 ```
-npm install -g generator-gulp-angular
+git clone https://github.com/ajbertra91/worldcup.git
 ```
 
-To launch app
+### To launch app
 ```
 gulp serve
 ```
