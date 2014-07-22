@@ -25,6 +25,11 @@ follow Swiip's directions
 git clone https://github.com/ajbertra91/worldcup.git
 ```
 
+### Install depenencies
+```
+npm install
+```
+
 ### To launch app
 ```
 gulp serve
