@@ -25,7 +25,7 @@ follow Swiip's directions
 git clone https://github.com/ajbertra91/worldcup.git
 ```
 
-### Install depenencies
+### Install dependencies
 ```
 npm install
 ```
